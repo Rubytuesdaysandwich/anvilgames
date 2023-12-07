@@ -1,5 +1,7 @@
 <template>
     <div class="card-container">
+<h3>Game Title</h3>
+<p>this is a little text to hold this place</p>
 <GameImage/>
     
     </div>
@@ -16,7 +18,9 @@ export default{
 </script>
 
 <style scoped>
+
 .card-container{
+   
     margin: 20px;
     color: black;
     background-color: black;
@@ -26,5 +30,8 @@ export default{
 
     height: 112px;
     width: 305px;
+}
+h3,p{
+    color: white;
 }
 </style>
