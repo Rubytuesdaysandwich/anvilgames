@@ -1,13 +1,19 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/trending_games">Trending</router-link>
-    <router-link to="/best_games">Best Games</router-link>
-    <router-link to="/new_games">New Games</router-link>
+    <HeaderComponent/>
   </nav>
   <router-view />
 </template>
 
+<script>
+import HeaderComponent from './components/Header/HeaderComponent.vue';
+
+export default {
+  components:{
+    HeaderComponent
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -15,20 +21,17 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  
+}
+body{
+  margin: 0;
+  padding:0;
+background-repeat: no-repeat;
+background-size:100vw ;
+background-image: linear-gradient(180deg, #aa0ff0 10% , #4f1758 20% , #030103 70%);
+
+
 }
 
-nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    text-decoration: none;
-    margin: 5px;
-
-    &.router-link-exact-active {
-      color: red;
-    }
-  }
-}
 </style>

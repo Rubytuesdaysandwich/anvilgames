@@ -1,6 +1,32 @@
 <template>
   <div class="trending">
-    <h1>Trending</h1>
-    <img src="../assets/anvil-games-logo.jpg" alt="" />
+    <h2>Trending</h2>
+   <CardComponent>
+
+    </CardComponent>
+     <CardComponent>
+
+    </CardComponent>
+     <CardComponent>
+
+    </CardComponent>
+     <CardComponent>
+
+    </CardComponent>
   </div>
 </template>
+<script>
+import CardComponent from "@/components/gamecomponents/GameCard.vue";
+
+export default{
+  components:{
+    CardComponent
+  }
+}
+
+</script>
+<style scoped>
+h2{
+  color: white;
+}
+</style>

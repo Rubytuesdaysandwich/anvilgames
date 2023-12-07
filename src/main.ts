@@ -6,3 +6,6 @@ import store from "./store";
 //add phaser here?
 
 createApp(App).use(store).use(router).mount("#app");
+
+
+
