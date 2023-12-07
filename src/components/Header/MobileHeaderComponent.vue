@@ -1,6 +1,13 @@
-<template>  
+<template>
+<div class="mobile-menu-icon">
+      <font-awesome-icon
+        class="bars"
+        :icon="['fas', 'bars']"
+        @click="toggleHambugerHeader"
+      />
 <div class="anvil-gaming-logo">
-  <img>
+<img>
+</div>
   <div class="login-create">
   <router-link to='/login'>Login</router-link>
   <router-link to='/creat_user'>create User</router-link>
@@ -18,26 +25,44 @@
     </header>
 </template>
 
-<script lang="ts">
-export default {
-  name:"HeaderComponent"
-  
-};
+<script>
+
+export default{
+    name:"MobileHeaderComponent",
+
+    data() {
+    return {
+      headerActive: true,
+    };
+  },
+  methods: {
+    toggleMobileMenu() {
+      this.headerActive = !this.headerActive;
+      console.log(this.headerActive);
+    },
+  },
+}
 </script>
 
-<style lang="scss" scoped>
+
+
+
+<style lang='scss' scoped>
+    .mobile-menu-icon{
+        color: blue;
+    }
   .anvil-gaming-logo{
-  background-image:url('../../assets/anvil games logo-2.jpg');
-  background-repeat: no-repeat;
-  background-position:left;
-  background-color: white;
-  height: 110px;
-  width: 100%;
+    background-image:url('../../assets/anvil games logo-2.jpg');
+    background-repeat: no-repeat;
+    background-position:left;
+    background-color: white;
+    height: 110px;
+    width: 100%;
   }
   .login-create{
-display: flex;
-justify-content: end;
-// gap:0.1rem;
+    display: flex;
+    justify-content: end;
+    gap:0.1rem;
   }
 
   .login-create > a{
@@ -47,13 +72,13 @@ justify-content: end;
     font-size: 25px;
   }
 header{
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 nav {
   padding: 30px;
 
-  a {
+    a {
     
     font-weight: bold;
     color: #e5e9ec;
@@ -70,12 +95,7 @@ nav {
 
   }
 }
-@media (max-width: 935px) {//this here will hide the desktop navigation when the device reaches 935px
-  // header {
-  //   display: none;
-  // }
-  .anvil-gaming-logo{
-    display: none;
-  }
+@media (min-width: 935px) {//this here will hide the desktop navigation when the device reaches 935px
+ 
 }
 </style>

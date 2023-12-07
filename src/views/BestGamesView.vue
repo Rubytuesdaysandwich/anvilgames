@@ -2,17 +2,9 @@
   <div class="best">
     <h2>Best Games</h2>
     <CardComponent>
-        <!-- <game-image></game-image> -->
+       
     </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
+   
   </div>
 </template>
 <script>

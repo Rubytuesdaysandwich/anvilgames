@@ -4,42 +4,7 @@
     <CardComponent>
 
     </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
-     <CardComponent>
-
-    </CardComponent>
+  
 
   </div>
 </template>
