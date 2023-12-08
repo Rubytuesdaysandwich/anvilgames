@@ -1,25 +1,25 @@
 <template>
+<div class="anvil-gaming-logo">
 <div class="mobile-menu-icon">
       <font-awesome-icon
         class="bars"
         :icon="['fas', 'bars']"
-        @click="toggleHambugerHeader"
+        @click="toggleMobileMenu"
       />
-<div class="anvil-gaming-logo">
 <img>
 </div>
-  <div class="login-create">
-  <router-link to='/login'>Login</router-link>
-  <router-link to='/creat_user'>create User</router-link>
-  </div>
 </div>
-    <header>
+    <header class="mobile-header-menu">
           <nav>
             <ul>
-    <router-link to="/">Home</router-link>
-    <router-link to="/trending_games">Trending</router-link>
-    <router-link to="/best_games">Best Games</router-link>
-    <router-link to="/new_games">New Games</router-link>
+                <div class="login-create">
+                <router-link to='/login'>Login</router-link>
+                <router-link to='/creat_user'>create User</router-link>
+                </div>
+                <router-link to="/">Home</router-link>
+                <router-link to="/trending_games">Trending</router-link>
+                <router-link to="/best_games">Best Games</router-link>
+                <router-link to="/new_games">New Games</router-link>
             </ul>
           </nav>
     </header>
@@ -48,14 +48,21 @@ export default{
 
 
 <style lang='scss' scoped>
-    .mobile-menu-icon{
-        color: blue;
+    .mobile-menu-icon {
+        color:rgb(200, 15, 15);
+        font-size: 5rem;
+        display: flex;
+        justify-content: end;
+        gap: 5rem;
+      
+        
+       
     }
   .anvil-gaming-logo{
     background-image:url('../../assets/anvil games logo-2.jpg');
     background-repeat: no-repeat;
     background-position:left;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     height: 110px;
     width: 100%;
   }
@@ -71,10 +78,16 @@ export default{
     color: white;
     font-size: 25px;
   }
-header{
-    display: flex;
-    justify-content: center;
+.mobile-header-menu {
+   background-color: black;
+display:flex;
+flex-direction: column;
+    
 }
+.mobile-header-menu nav{
+
+}
+
 nav {
   padding: 30px;
 
@@ -96,6 +109,7 @@ nav {
   }
 }
 @media (min-width: 935px) {//this here will hide the desktop navigation when the device reaches 935px
- 
+ .anvil-gaming-logo {display: none;}//temporary
+.mobile-header-menu{display: none;}//temporary
 }
 </style>
