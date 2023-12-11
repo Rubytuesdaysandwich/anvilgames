@@ -29,15 +29,19 @@ body{
   margin: 0;
   padding:0;
   background-image: linear-gradient(180deg, #aa0ff0 10vh , #4f1758 20vh , #030103 70vh);
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
   background-size: cover;
-  background-size:100%;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: auto;
   width: 100vw;
+  max-height: auto;
 
 
-}
+} 
+
+
+
 
 
 </style>

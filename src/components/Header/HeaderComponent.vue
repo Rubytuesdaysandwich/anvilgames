@@ -37,7 +37,7 @@ export default {
   .login-create{
 display: flex;
 justify-content: end;
-// gap:0.1rem;
+margin-right: 50px;
   }
 
   .login-create > a{
@@ -71,9 +71,9 @@ nav {
   }
 }
 @media (max-width: 935px) {//this here will hide the desktop navigation when the device reaches 935px
-  // header {
-  //   display: none;
-  // }
+  header {
+    display: none;
+  }
   .anvil-gaming-logo{
     display: none;
   }

@@ -1,18 +1,19 @@
 <template>
   <div class="trending">
     <h2>Trending</h2>
-   <CardComponent>
+    <flex-grid class="grid-container">
 
-    </CardComponent>
+  </flex-grid>
 
   </div>
 </template>
 <script>
-import CardComponent from "@/components/gamecomponents/GameCard.vue";
-
+// import CardComponent from "@/components/gamecomponents/GameCard.vue";
+import FlexGrid from '../components/body/FlexGrid.vue'
 export default{
   components:{
-    CardComponent
+    // CardComponent,
+    FlexGrid
   }
 }
 

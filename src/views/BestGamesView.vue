@@ -1,18 +1,19 @@
 <template>
   <div class="best">
     <h2>Best Games</h2>
-    <CardComponent>
-       
-    </CardComponent>
+     <flex-grid class="grid-container">
+
+  </flex-grid>
    
   </div>
 </template>
 <script>
-import CardComponent from "@/components/gamecomponents/GameCard.vue";
-
+// import CardComponent from "@/components/gamecomponents/GameCard.vue";
+import FlexGrid from '../components/body/FlexGrid.vue'
 export default{
   components:{
-    CardComponent,
+    // CardComponent,
+    FlexGrid
     
   }
 }
@@ -22,4 +23,5 @@ export default{
 h2{
   color: white;
 }
+
 </style>

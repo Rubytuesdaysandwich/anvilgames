@@ -1,5 +1,6 @@
 <template>
-<div class="anvil-gaming-logo">
+<div class="menu-container"></div>
+<div class="header-bars">
 <div class="mobile-menu-icon">
       <font-awesome-icon
         class="bars"
@@ -9,7 +10,11 @@
 <img>
 </div>
 </div>
+<div :class="{ hidden: headerActive }">
     <header class="mobile-header-menu">
+      <div class="anvil-gaming-logo">
+<img src="../../assets/anvil-games-logo.jpg" alt="">
+      </div>
           <nav>
             <ul>
                 <div class="login-create">
@@ -23,6 +28,7 @@
             </ul>
           </nav>
     </header>
+</div>
 </template>
 
 <script>
@@ -54,14 +60,23 @@ export default{
         display: flex;
         justify-content: end;
         gap: 5rem;
+        cursor: pointer;
       
         
        
     }
-  .anvil-gaming-logo{
-    background-image:url('../../assets/anvil games logo-2.jpg');
-    background-repeat: no-repeat;
-    background-position:left;
+    .anvil-gaming-logo{
+      display: flex;
+      justify-content: center;
+   
+    }
+ .anvil-gaming-logo > img{
+width: 100%;
+height: 5rem;
+
+ }
+ 
+  .header-bars{
     background-color: rgb(255, 255, 255);
     height: 110px;
     width: 100%;
@@ -76,17 +91,32 @@ export default{
     margin: 1rem;
     background-color: #2c3f53;
     color: white;
-    font-size: 25px;
+    font-size: 15px;
+    text-align: start;
   }
 .mobile-header-menu {
    background-color: black;
 display:flex;
+position: absolute;
+right: 0;
 flex-direction: column;
+
     
 }
 .mobile-header-menu nav{
-
+ display: flex; 
+  justify-content: end;
+  
 }
+.mobile-header-menu ul{
+  display: flex;
+  flex-direction: column;
+  max-width: 10rem;
+}
+  .hidden{
+    display: none;
+  }
+
 
 nav {
   padding: 30px;
@@ -108,8 +138,9 @@ nav {
 
   }
 }
-@media (min-width: 935px) {//this here will hide the desktop navigation when the device reaches 935px
- .anvil-gaming-logo {display: none;}//temporary
-.mobile-header-menu{display: none;}//temporary
+@media (min-width:935px) {//this here will hide the desktop navigation when the device reaches 935px
+.menu-container,.header-bars,.mobile-header-menu,.anvil-gaming-logo{
+  display: none;
+}
 }
 </style>
