@@ -1,9 +1,11 @@
 <template>
+<div>
   <nav>
     <HeaderComponent/>
     <MobileHeaderComponent/>
   </nav>
   <router-view />
+</div>
 </template>
 
 <script>

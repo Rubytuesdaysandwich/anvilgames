@@ -11,6 +11,7 @@
 <script>
 // import CardComponent from "@/components/gamecomponents/GameCard.vue";
 import FlexGrid from '@/components/body/FlexGrid.vue';
+
 export default{
   components:{
     // CardComponent,

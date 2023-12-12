@@ -1,11 +1,11 @@
 <template>
     <div class="card-container">
         <div class="game-image-container">
-            <img src="../../assets/anvil-games-logo.jpg" alt="">
+            <img :src="require(`../../assets/${gameImage}`)" alt="">
         </div>
         <div class="game-info">
-        <h4 class="game-title">Game Title</h4>
-        <p>this is a little text to hold this place</p>
+        <h4 class="game-title">{{title}}</h4>
+        <p>{{gameInfo}}</p>
         </div>
 
 
@@ -15,10 +15,11 @@
 <script >
 
 export default{
-    name:"CardComponent",
-    components:{
-
-   
+    name:"GameCardComponent",
+ props:{
+    title:String,
+    gameInfo:String,
+    gameImage:String
  }
 }
 </script>
@@ -67,5 +68,8 @@ flex-grow: 1;
     word-wrap: normal;
     flex-grow: 1;
    
+}
+p{
+    width: 100%;
 }
 </style>

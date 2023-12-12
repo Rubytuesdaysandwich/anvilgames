@@ -1,20 +1,30 @@
 <template>
     <div class="grid-container">
     <div>
-<CardComponent></CardComponent>
+<GameCardComponent :game-info="" :title="titleText" :gameImage="'anvil-games-logo.jpg'"/>
     </div>
-
     </div>
     
 </template>
 
 <script>
-import CardComponent from '../gamecomponents/GameCard.vue'
+import GameCardComponent from '../gamecomponents/GameCard.vue'
+import {getDummy} from '../../utils/api'
+
+getDummy();
+console.log(getDummy);
+
 export default {
     name:"FlexGrid",
     components:{
-        CardComponent
+        GameCardComponent
+    },
+      data(){
+    return{
+
     }
+   }
+
 }
 </script>
 
