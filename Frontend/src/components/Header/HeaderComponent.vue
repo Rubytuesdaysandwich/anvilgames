@@ -1,26 +1,33 @@
 <template>  
-<div class="anvil-gaming-logo">
-  <img>
-  <div class="login-create">
-  <router-link to='/login'>Login</router-link>
-  <router-link to='/creat_user'>create User</router-link>
+<div>
+  <div class="anvil-gaming-logo">
+    <img>
+    <div class="login-create">
+    <router-link to='/login'>Login</router-link>
+    <router-link to='/creat_user'>create User</router-link>
+    </div>
   </div>
+      <header>
+            <nav>
+              <ul>
+      <router-link to="/">Home</router-link>
+      <router-link to="/trending_games">Trending</router-link>
+      <router-link to="/best_games">Best Games</router-link>
+      <router-link to="/new_games">New Games</router-link>
+              </ul>
+            </nav>
+      </header>
 </div>
-    <header>
-          <nav>
-            <ul>
-    <router-link to="/">Home</router-link>
-    <router-link to="/trending_games">Trending</router-link>
-    <router-link to="/best_games">Best Games</router-link>
-    <router-link to="/new_games">New Games</router-link>
-            </ul>
-          </nav>
-    </header>
+
 </template>
 
 <script lang="ts">
+// import { Fragment } from 'vue'
 export default {
-  name:"HeaderComponent"
+  name:"HeaderComponent",
+  components:{
+    
+  },
   
 };
 </script>

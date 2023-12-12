@@ -3,7 +3,7 @@
     <h2>Trending</h2>
     <flex-grid class="grid-container">
 
-  </flex-grid>
+    </flex-grid>
 
   </div>
 </template>

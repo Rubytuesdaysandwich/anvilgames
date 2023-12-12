@@ -21,7 +21,10 @@
 </template>
 <script>
 export default {
-    name:'CreateUser'
+    name:'CreateUser',
+    props:{
+
+    }
 }
 </script>
 

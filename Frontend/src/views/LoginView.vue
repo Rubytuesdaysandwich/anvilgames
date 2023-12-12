@@ -1,7 +1,7 @@
 <template>
   <div class="best">
     <h2>Login</h2>
-<LoginForm/>
+  <LoginForm/>
   </div>
 </template>
 <script>

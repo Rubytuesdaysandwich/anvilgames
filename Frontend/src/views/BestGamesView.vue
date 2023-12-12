@@ -1,9 +1,9 @@
 <template>
   <div class="best">
     <h2>Best Games</h2>
-     <flex-grid class="grid-container">
+    <flex-grid class="grid-container">
 
-  </flex-grid>
+    </flex-grid>
    
   </div>
 </template>

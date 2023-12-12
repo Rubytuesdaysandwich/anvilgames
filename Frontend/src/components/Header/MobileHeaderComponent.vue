@@ -1,5 +1,6 @@
 <template>
-<div class="menu-container"></div>
+
+<div class="menu-container">
 <div class="header-bars">
 <div class="mobile-menu-icon">
       <font-awesome-icon
@@ -7,7 +8,6 @@
         :icon="['fas', 'bars']"
         @click="toggleMobileMenu"
       />
-<img>
 </div>
 </div>
 <div :class="{ hidden: headerActive }">
@@ -29,13 +29,17 @@
           </nav>
     </header>
 </div>
+</div>
+
 </template>
 
 <script>
 
 export default{
     name:"MobileHeaderComponent",
-
+components:{
+ 
+},
     data() {
     return {
       headerActive: true,

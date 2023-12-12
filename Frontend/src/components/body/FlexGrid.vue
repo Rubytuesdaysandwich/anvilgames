@@ -1,18 +1,14 @@
 <template>
-    <div class="grid-container">
-    <div v-for="games in displayGamesList" :key="gameId.id">
-<GameCardComponent :game-info="'placeholder'" :title="'titleText'" :gameImage="'anvil-games-logo.jpg'"/>
+  <div class="grid-container">
+    <div v-for="game in games" :key="game.id">
+      <GameCardComponent :game-info="game.gameInfo" :title="game.title" :gameImage="'anvil-games-logo.jpg'"/>
     </div>
-    </div>
-    
+  </div>
 </template>
 
 <script>
 import GameCardComponent from '../gamecomponents/GameCard.vue'
-import {getDummy} from '../../utils/api'
-
-getDummy();//retrieving dummy data from the backend
-console.log(getDummy);
+import {getDummy} from "../../utils/api"//grabbing api data from here using fetch
 
 export default {
     name:"FlexGrid",
@@ -21,9 +17,14 @@ export default {
     },
       data(){
     return{
-
+     games: []
     }
+   },
+   async mounted(){//this is the mounted cycle
+    const data = await getDummy();
+    this.games = data.games;
    }
+
 
 }
 </script>
