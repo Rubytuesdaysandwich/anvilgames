@@ -1,7 +1,7 @@
 <template>
     <div class="grid-container">
-    <div>
-<GameCardComponent :game-info="" :title="titleText" :gameImage="'anvil-games-logo.jpg'"/>
+    <div v-for="games in displayGamesList" :key="gameId.id">
+<GameCardComponent :game-info="'placeholder'" :title="'titleText'" :gameImage="'anvil-games-logo.jpg'"/>
     </div>
     </div>
     
@@ -11,7 +11,7 @@
 import GameCardComponent from '../gamecomponents/GameCard.vue'
 import {getDummy} from '../../utils/api'
 
-getDummy();
+getDummy();//retrieving dummy data from the backend
 console.log(getDummy);
 
 export default {
