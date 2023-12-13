@@ -37,9 +37,6 @@
 
 export default{
     name:"MobileHeaderComponent",
-components:{
- 
-},
     data() {
     return {
       headerActive: true,
@@ -50,6 +47,12 @@ components:{
       this.headerActive = !this.headerActive;
       console.log(this.headerActive);
     },
+        logout(){
+      this.$store.commit('logout')
+    },
+    mounted(){
+      this.$store.commit('initializeStore')
+    }
   },
 }
 </script>

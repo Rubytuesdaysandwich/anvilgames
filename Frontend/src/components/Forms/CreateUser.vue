@@ -1,3 +1,5 @@
+
+//!You will need JWT tokens for users to not be logged out when the page is reloaded.
 <template>
 <div class="create-form-container">
     <form action="submit">

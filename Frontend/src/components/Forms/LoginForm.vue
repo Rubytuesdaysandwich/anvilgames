@@ -1,11 +1,12 @@
 <template>
 <div class="login-form-container">
-    <form action="submit">
-        <input type="text" placeholder="UserName">
-        <input type="text" placeholder="Password">
+    <form  action="submit">
+       
+        <input v-model="form.email" type="Email" placeholder="Email" required>
+        <input v-model="form.Password" type="password" placeholder="Password" required>
         <div class="confirm">
         <button>Cancel</button>
-        <button>submit</button>
+        <button @click="submit" >login</button>
         </div>
     </form>
 </div>
@@ -14,7 +15,22 @@
 
 <script>
 export default {
-    name:'LoginForm'
+    name:'LoginForm',
+    data(){
+        return{
+            form:{
+                email:"",
+                password:"",
+            }
+        }
+    },
+    methods:{
+        submit(e){
+            e.preventDefault()
+            this.$store.commit('login',this.form.email)
+            this.$router.push('/Frontend/src/views/HomeView.vue')
+        }
+    }
 }
 </script>
 <style scoped>

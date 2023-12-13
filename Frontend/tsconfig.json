@@ -15,7 +15,8 @@
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "jest"
+      "jest",
+      "vue"
     ],
     "paths": {
       "@/*": [
@@ -28,6 +29,7 @@
       "dom.iterable",
       "scripthost"
     ]
+    
   },
   "include": [
     "src/**/*.ts",
@@ -35,7 +37,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/store/index.ts", "src/main.ts", "src/shims-vue.d.ts"  ],
   "exclude": [
     "node_modules"
   ]

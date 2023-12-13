@@ -3,7 +3,8 @@
   <div class="anvil-gaming-logo">
     <img>
     <div class="login-create">
-    <router-link to='/login'>Login</router-link>
+    <router-link v-if="!$store.state.email" to='/login'>Login</router-link>
+    <a v-if="$store.state.email" @click="logout">Logout</a>
     <router-link to='/creat_user'>create User</router-link>
     </div>
   </div>
@@ -25,9 +26,14 @@
 // import { Fragment } from 'vue'
 export default {
   name:"HeaderComponent",
-  components:{
-    
-  },
+ methods:{
+    logout(){
+      this.$store.commit('logout')
+    },
+    mounted(){
+      this.$store.commit('initializeStore')
+    }
+  }
   
 };
 </script>
