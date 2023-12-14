@@ -20,26 +20,27 @@ export default {
         return{
             
             form:{
-                errors:[],
-                email:"",
-                password:"",
+                errors:[] as string[],//asserting the type accepted into this array
+                email:String,
+                password:String,
             }
         }
     },
     methods:{
-        submit(e){
+        submit(e:Event){
             e.preventDefault()
             this.$store.commit('login',this.form.email)
             this.$store.commit('login',this.form.password)
             this.$router.push('/Frontend/src/views/HomeView.vue')
         },
-        checkForm(e){
-            if(this.email && this.password){
-             this.errors = [];
+        checkForm(e:Event){
+            e.preventDefault();
+            if(!this.form.email && !this.form.password){
+             this.form.errors = [];
              return;
-            }else if(!this.email){
-                this.errors.push("Email required")
-            }if(!this.password) this.errors.push("Password required")
+            }else if(!this.form.email){
+                this.form.errors.push("Email required")
+            }if(!this.form.password) this.form.errors.push("Password required")
         }
     }
 }
