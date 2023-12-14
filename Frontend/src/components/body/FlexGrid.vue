@@ -1,32 +1,50 @@
 <template>
   <div class="grid-container">
     <div v-for="game in games" :key="game.id">
-      <GameCardComponent :game-info="game.gameInfo" :title="game.title" :gameImage="'anvil-games-logo.jpg'"/>
+      <GameCardComponent :game-info="game.gameInfo" :title="game.title" :game-image="'anvil-games-logo.jpg'"/>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import GameCardComponent from '../gamecomponents/GameCard.vue'
 import {getDummy} from "../../utils/api"//grabbing api data from here using fetch
+import {defineComponent} from 'vue'
 
-export default {
+interface games {
+  id: number;
+  title: string;
+  gameInfo: string;
+}
+
+
+
+export default defineComponent( {
     name:"FlexGrid",
     components:{
         GameCardComponent
     },
       data(){
     return{
-     games: []
+    
+     games:[] as games[]
     }
    },
+  
+ 
    async mounted(){//this is the mounted cycle
-    const data = await getDummy();
+    try{
+         const data = await getDummy();
+         console.log(data);//log the recieved data
     this.games = data.games;
+    }catch (error){
+      console.error('Error fetching data:', (error as Error).message)
+    }
+ 
    }
 
 
-}
+})
 </script>
 
 

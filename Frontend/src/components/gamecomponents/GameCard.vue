@@ -12,16 +12,16 @@
     
     </div>
 </template>
-<script >
-
-export default{
+<script lang="ts" >
+import { PropType, defineComponent } from 'vue';
+export default defineComponent( {
     name:"GameCardComponent",
  props:{
-    title:String,
-    gameInfo:String,
-    gameImage:String
- }
-}
+    title:{type:String as PropType<string>,required: true},
+    gameInfo:{type:String as PropType<string>,required: true},
+    gameImage:{type:String as PropType<string>,required: true},
+ },
+})
 </script>
 
 <style scoped>

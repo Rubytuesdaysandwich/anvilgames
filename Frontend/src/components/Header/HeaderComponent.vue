@@ -23,8 +23,8 @@
 </template>
 
 <script lang="ts">
-// import { Fragment } from 'vue'
-export default {
+import { defineComponent } from 'vue';//this get rid of the store not defined error due to typescript being used
+export default defineComponent({
   name:"HeaderComponent",
  methods:{
     logout(){
@@ -35,7 +35,7 @@ export default {
     }
   }
   
-};
+});
 </script>
 
 <style lang="scss" scoped>

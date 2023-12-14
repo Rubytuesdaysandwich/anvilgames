@@ -1,39 +1,39 @@
 <template>
 
-<div class="menu-container">
-<div class="header-bars">
-<div class="mobile-menu-icon">
-      <font-awesome-icon
-        class="bars"
-        :icon="['fas', 'bars']"
-        @click="toggleMobileMenu"
-      />
-</div>
-</div>
-<div :class="{ hidden: headerActive }">
-    <header class="mobile-header-menu">
-      <div class="anvil-gaming-logo">
-<img src="../../assets/anvil-games-logo.jpg" alt="">
+  <div class="menu-container">
+    <div class="header-bars">
+      <div class="mobile-menu-icon">
+            <font-awesome-icon
+              class="bars"
+              :icon="['fas', 'bars']"
+              @click="toggleMobileMenu"
+            />
       </div>
-          <nav>
-            <ul>
-                <div class="login-create">
-                <router-link to='/login'>Login</router-link>
-                <router-link to='/creat_user'>create User</router-link>
-                </div>
-                <router-link to="/">Home</router-link>
-                <router-link to="/trending_games">Trending</router-link>
-                <router-link to="/best_games">Best Games</router-link>
-                <router-link to="/new_games">New Games</router-link>
-            </ul>
-          </nav>
-    </header>
-</div>
-</div>
+    </div>
+    <div :class="{ hidden: headerActive }">
+        <header class="mobile-header-menu">
+          <div class="anvil-gaming-logo">
+    <img src="../../assets/anvil-games-logo.jpg" alt="">
+          </div>
+              <nav>
+                <ul>
+                    <div class="login-create">
+                    <router-link to='/login'>Login</router-link>
+                    <router-link to='/creat_user'>create User</router-link>
+                    </div>
+                    <router-link to="/">Home</router-link>
+                    <router-link to="/trending_games">Trending</router-link>
+                    <router-link to="/best_games">Best Games</router-link>
+                    <router-link to="/new_games">New Games</router-link>
+                </ul>
+              </nav>
+        </header>
+    </div>
+  </div>
 
 </template>
 
-<script>
+<script lang="ts">
 
 export default{
     name:"MobileHeaderComponent",

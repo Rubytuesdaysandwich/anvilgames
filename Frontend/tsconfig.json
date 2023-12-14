@@ -4,6 +4,7 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    "allowJs": true, // Allow JavaScript files to be part of the TypeScript project
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "skipLibCheck": true,
