@@ -27,11 +27,13 @@ export default defineComponent( {
             }
         }
     },
+  
     methods:{
         submit(e:Event){
             e.preventDefault()
             this.$store.commit('login',this.form.email)
             this.$store.commit('login',this.form.password)
+            console.log(this.$store);
             this.$router.push('@/HomeView.vue')
         },
         // checkForm(){
