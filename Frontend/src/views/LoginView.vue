@@ -5,13 +5,13 @@
   </div>
 </template>
 <script>
-
+import { defineComponent } from 'vue';
 import LoginForm from '../components/Forms/LoginForm.vue'
-export default{
+export default defineComponent({
   components:{
     LoginForm
   }
-}
+})
 
 </script>
 <style scoped>

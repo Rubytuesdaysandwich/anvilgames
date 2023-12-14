@@ -1,6 +1,6 @@
 <template>
 <div class="login-form-container">
-    <form id="login" @submit="checkForm" action="submit" method="post">
+    <form id="login"  action="submit" method="post">
        
         <input v-model="form.email" type="Email" placeholder="Email" required>
         <input v-model="form.password" type="password" placeholder="Password" required>
@@ -14,15 +14,16 @@
 
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent( {
     name:'LoginForm',
     data(){
         return{
             
             form:{
                 errors:[] as string[],//asserting the type accepted into this array
-                email:String,
-                password:String,
+                email:'',
+                password:'',
             }
         }
     },
@@ -31,19 +32,19 @@ export default {
             e.preventDefault()
             this.$store.commit('login',this.form.email)
             this.$store.commit('login',this.form.password)
-            this.$router.push('/Frontend/src/views/HomeView.vue')
+            this.$router.push('@/HomeView.vue')
         },
-        checkForm(e:Event){
-            e.preventDefault();
-            if(!this.form.email && !this.form.password){
-             this.form.errors = [];
-             return;
-            }else if(!this.form.email){
-                this.form.errors.push("Email required")
-            }if(!this.form.password) this.form.errors.push("Password required")
-        }
+        // checkForm(){
+          
+        //     if(!this.form.email && !this.form.password){
+        //      this.form.errors = [];
+        //      return;
+        //     }else if(!this.form.email){
+        //         this.form.errors.push("Email required")
+        //     }if(!this.form.password) this.form.errors.push("Password required")
+        // }
     }
-}
+})
 </script>
 <style scoped>
 .login-form-container{

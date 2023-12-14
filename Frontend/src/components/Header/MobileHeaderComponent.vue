@@ -34,8 +34,8 @@
 </template>
 
 <script lang="ts">
-
-export default{
+import { defineComponent } from 'vue';
+export default defineComponent({
     name:"MobileHeaderComponent",
     data() {
     return {
@@ -54,7 +54,7 @@ export default{
       this.$store.commit('initializeStore')
     }
   },
-}
+})
 </script>
 
 

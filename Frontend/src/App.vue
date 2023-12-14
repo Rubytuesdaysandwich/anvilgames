@@ -11,21 +11,21 @@
 <script>
 import HeaderComponent from './components/Header/HeaderComponent.vue';
 import MobileHeaderComponent from './components/Header/MobileHeaderComponent.vue';
-
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent( {
   
   components:{
     HeaderComponent,
     MobileHeaderComponent,},
-  //    methods:{
-  //   logout(){
-  //     this.$store.commit('logout')
-  //   },
-  //   mounted(){
-  //     this.$store.commit('initializeStore')
-  //   }
-  // }
-}
+     methods:{
+    logout(){
+      this.$store.commit('logout')
+    },
+    mounted(){
+      this.$store.commit('initializeStore')
+    }
+  }
+})
 </script>
 <style lang="scss">
 #app {

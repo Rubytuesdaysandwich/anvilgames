@@ -6,13 +6,13 @@
 </template>
 <script>
 import CreateUser from '@/components/Forms/CreateUser.vue'
+import { defineComponent } from 'vue';
 
-
-export default{
+export default defineComponent({
   components:{
    CreateUser
   }
-}
+})
 
 </script>
 <style scoped>

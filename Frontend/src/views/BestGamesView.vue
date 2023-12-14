@@ -10,13 +10,14 @@
 <script>
 // import CardComponent from "@/components/gamecomponents/GameCard.vue";
 import FlexGrid from '../components/body/FlexGrid.vue'
-export default{
+import { defineComponent } from 'vue';
+export default defineComponent({
   components:{
     // CardComponent,
     FlexGrid
     
   }
-}
+})
 
 </script>
 <style scoped>
