@@ -19,7 +19,7 @@
                 <ul>
                     <div class="login-create">
                       <router-link v-if="!$store.state.user.email" to='/login'>Login</router-link>
-                      <a v-if="$store.state.user.email" @click="logout">Logout</a>
+                      <a type="button" v-if="$store.state.user.email" @click="logout">Logout</a>
                       <router-link to='/creat_user'>create User</router-link>
                     </div>
                       <router-link to="/">Home</router-link>

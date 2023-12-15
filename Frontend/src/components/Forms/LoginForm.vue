@@ -4,8 +4,8 @@
         <input v-model="form.email" type="Email" placeholder="Email" required>
         <input v-model="form.password" type="password" placeholder="Password" required>
         <div class="confirm">
-        <button @click="cancel">Cancel</button>
-        <button @keydown.enter.prevent="submit" @click.prevent="submit" >login </button>
+        <button type="button" @click.prevent="cancel">Cancel</button>
+        <button type="submit" @click.prevent="submit" >login </button>
         </div>
     </form>
 </div>
@@ -36,11 +36,12 @@ export default defineComponent( {
                 return;
             }else if(this.form.errors.length === 0 || this.form.email !== '' && this.form.password !== ''){
                     this.$store.commit('login',{email:this.form.email,password:this.form.password});
-                    this.$router.push('/HomeView.vue');
+                    this.$router.push('/');
             }
             },
             cancel(){
-                this.$router.push('/HomeView');
+                this.$router.push('/');
+                return;
             },
         },
     

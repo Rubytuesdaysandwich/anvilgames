@@ -17,7 +17,7 @@
         </div>
         </div>
         <div class="confirm">
-            <button>Cancel</button>
+            <button type="button" >Cancel</button>
             <button  type="submit">submit</button>
         </div>
     </form>
