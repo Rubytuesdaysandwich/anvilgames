@@ -1,4 +1,5 @@
-import { createStore } from "vuex";
+import { createStore, } from "vuex";
+
 // This file is using Typescript so you must define you variable types before using them here in the interface
 interface RootStateManagmentVuex {
     // Define root state properties
@@ -20,13 +21,13 @@ const store = createStore<RootStateManagmentVuex>({
         },
     },
     getters: {},
-    mutations: {
+    mutations: ({
         //managing the login and logout state here
-        login(state) {
-            state.user.email = store.state.user.email;
-            state.user.password = store.state.user.password;;
-            localStorage.setItem('email', store.state.user.email);
-            localStorage.setItem('password', store.state.user.password);
+        login(state, { email, password }) {
+            state.user.email = email;
+            state.user.password = password;
+            localStorage.setItem('email', state.user.email);
+            localStorage.setItem('password', state.user.password);
             // alert('Logged in')
         },
         logout(state) {
@@ -39,11 +40,11 @@ const store = createStore<RootStateManagmentVuex>({
         initializeStore(state) {
             if (localStorage.getItem('email')) {
                 state.user.email = localStorage.getItem('email') ?? "";
-                state.user.email = localStorage.getItem('password') ?? "";
+                state.user.password = localStorage.getItem('password') ?? "";
             }
             //managing the login and logout state here ▲
         }
-    },
+    }),
     actions: {},
     modules: {},
 });

@@ -18,13 +18,14 @@
               <nav>
                 <ul>
                     <div class="login-create">
-                    <router-link to='/login'>Login</router-link>
-                    <router-link to='/creat_user'>create User</router-link>
+                      <router-link v-if="!$store.state.user.email" to='/login'>Login</router-link>
+                      <a v-if="$store.state.user.email" @click="logout">Logout</a>
+                      <router-link to='/creat_user'>create User</router-link>
                     </div>
-                    <router-link to="/">Home</router-link>
-                    <router-link to="/trending_games">Trending</router-link>
-                    <router-link to="/best_games">Best Games</router-link>
-                    <router-link to="/new_games">New Games</router-link>
+                      <router-link to="/">Home</router-link>
+                      <router-link to="/trending_games">Trending</router-link>
+                      <router-link to="/best_games">Best Games</router-link>
+                      <router-link to="/new_games">New Games</router-link>
                 </ul>
               </nav>
         </header>
@@ -47,12 +48,9 @@ export default defineComponent({
       this.headerActive = !this.headerActive;
       console.log(this.headerActive);
     },
-        logout(){
+    logout(){
       this.$store.commit('logout')
     },
-    mounted(){
-      this.$store.commit('initializeStore')
-    }
   },
 })
 </script>

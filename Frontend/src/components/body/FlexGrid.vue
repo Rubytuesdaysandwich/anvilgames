@@ -53,7 +53,7 @@ export default defineComponent( {
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
-justify-content: start;
+justify-content: center;
 
 }
 .grid-container>div{

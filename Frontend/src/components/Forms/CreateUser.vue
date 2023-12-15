@@ -12,22 +12,25 @@
                 <input type="email"  placeholder="Email">
                 <input type="date"  placeholder="Age">
             <label for="birthday" id="birthday" name="">Age</label>
+            <CharacterCreation></CharacterCreation>
+
         </div>
         </div>
         <div class="confirm">
             <button>Cancel</button>
-            <button>submit</button>
+            <button  type="submit">submit</button>
         </div>
     </form>
 </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
+import CharacterCreation from './CharacterCreation.vue'
 export default defineComponent( {
     name:'CreateUser',
-    props:{
-
-    }
+ components:{
+    CharacterCreation,
+ }
 })
 </script>
 
