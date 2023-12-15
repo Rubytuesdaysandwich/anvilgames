@@ -1,12 +1,11 @@
 <template>
 <div class="login-form-container">
-    <form id="login"  action="/submit" method="post">
-       
+    <form id="login" action="/submit" method="post"> 
         <input v-model="form.email" type="Email" placeholder="Email" required>
         <input v-model="form.password" type="password" placeholder="Password" required>
         <div class="confirm">
         <button @click="cancel">Cancel</button>
-        <button type="submit" @click="submit" >login</button>
+        <button @keydown.enter.prevent="submit" @click.prevent="submit" >login </button>
         </div>
     </form>
 </div>
@@ -28,23 +27,23 @@ export default defineComponent( {
         }
     },
     methods:{
-        submit(e:Event){     
-             if(this.form.email === '' || this.form.password === ''){
+        submit(){
+            this.form.errors = [];  
+             if(this.form.email === '' && this.form.password === ''){
                 this.form.errors.push("Email required");
                 this.form.errors.push("Password required");
+                console.log(this.form.errors);
                 return;
-            }else{
-            console.log(e);
-                e.preventDefault();
-                this.$store.commit('login',{email:this.form.email,password:this.form.password});
-                console.log(this.$store);
-                this.$router.push('@/HomeView.vue');
+            }else if(this.form.errors.length === 0 || this.form.email !== '' && this.form.password !== ''){
+                    this.$store.commit('login',{email:this.form.email,password:this.form.password});
+                    this.$router.push('/HomeView.vue');
             }
+            },
+            cancel(){
+                this.$router.push('/HomeView');
+            },
         },
-        cancel(){
-            this.$router.push('@/HomeView');
-        },
-    }  
+    
 })
 </script>
 <style scoped>
