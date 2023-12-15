@@ -17,7 +17,7 @@
         </div>
         </div>
         <div class="confirm">
-            <button type="button" >Cancel</button>
+            <button @click.prevent="cancel" type="button" >Cancel</button>
             <button  type="submit">submit</button>
         </div>
     </form>
@@ -30,6 +30,12 @@ export default defineComponent( {
     name:'CreateUser',
  components:{
     CharacterCreation,
+ },
+ methods:{
+    cancel(){
+                this.$router.push('/');
+                return;
+            },
  }
 })
 </script>
@@ -55,10 +61,14 @@ input{
 
 
 .confirm{
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     gap: 5rem;
 
+}
+.confirm>button{
+    font-size: 1.5rem;
 }
 </style>
