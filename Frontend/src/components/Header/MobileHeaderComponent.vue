@@ -46,7 +46,7 @@ export default defineComponent({
   methods: {
     toggleMobileMenu() {
       this.headerActive = !this.headerActive;
-      console.log(this.headerActive);
+      // console.log(this.headerActive);
     },
     logout(){
       this.$store.commit('logout')
