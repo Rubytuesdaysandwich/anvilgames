@@ -8,17 +8,17 @@
     <slot/>
 </div>
 </template>
-<script>
+<script lang="ts">
 //creating reusbale tabs for our web pages
 //uses slots to contain data from another component and still allow that component to be reusable
 
 import { defineComponent,  } from 'vue';
-import { ref,provide } from 'vue';
+import { ref,provide,Slot } from 'vue';
 export default defineComponent({
    
    
     
-        setup(props,{slots}){
+        setup(props, { slots }: { slots: { default: Slot[] } }){
             const tabTitles = ref(slots.default().map((tab) => tab.props ? tab.props.title:null))
             const selectedTitle =ref(tabTitles.value[0])
             
