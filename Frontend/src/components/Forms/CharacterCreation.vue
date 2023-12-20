@@ -3,25 +3,25 @@
         <canvas>
 
         </canvas>
-    <form action="">
-        <div class="character-attribute-selector-box">
-            <div class="color-selectors">
-                <div>
-                    <label class="input-description" for="hair">hair</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="head">head</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="eyes">eyes</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="body">body</label><input type="color">
-                </div>
-                
-            </div> 
-            <div   class="color-selectors">
-                <div>
+            <ReusableTabWrapper>
+                <TabContent title="1">
+
+                        <div>
+                            <label class="input-description" for="hair">hair</label><input type="color">
+                        </div>
+                        <div>
+                            <label class="input-description" for="head">head</label><input type="color">
+                        </div>
+                        <div>
+                            <label class="input-description" for="eyes">eyes</label><input type="color">
+                        </div>
+                        <div>
+                            <label class="input-description" for="body">body</label><input type="color">
+                        </div>
+                        
+                  
+            </TabContent>
+                <TabContent title="2"><div>
                     <label class="input-description" for="arms">arms</label><input type="color">
                 </div>
                 <div>
@@ -32,11 +32,8 @@
                 </div>
                 <div>
                     <label class="input-description" for="feet">feet</label><input type="color">
-                </div>
-                
-            </div>
-            <div   class="color-selectors">
-                <div>
+                </div></TabContent>
+                <TabContent title="3"> <div>
                     <label class="input-description" for="shirt">shirt</label><input type="color">
                 </div>
                 <div>
@@ -47,33 +44,27 @@
                 </div>
                 <div>
                     <label class="input-description" for="pants">pants</label><input type="color">
-                </div>
-                
-            </div>
-            <div  class="color-selectors">
-                <div>
+                </div></TabContent>
+                <TabContent title="4">                <div>
                     <label class="input-description" for="socks">socks</label><input type="color">
                 </div>
                 <div>
                     <label class="input-description" for="shoes">shoes</label><input type="color">
-                </div>
-            </div>
-        </div>
-    </form>
-    <div class="next-color-selection">
-            <button type="button"  @click.prevent="toggleColorSelectors">1</button>
-            <button type="button"  @click.prevent="toggleColorSelectors">2</button>
-            <button type="button"  @click.prevent="toggleColorSelectors">3</button>
-            <button type="button"  @click.prevent="toggleColorSelectors">4</button>
-        </div> 
+                </div></TabContent>
+            </ReusableTabWrapper>
         </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import ReusableTabWrapper from '../body/ReusableTabWrapper.vue';
+import TabContent from '../body/TabContent.vue'
 export default defineComponent({
     name:"CharacterCreation",
-
+components:{
+    ReusableTabWrapper,
+    TabContent
+},
     data(){
 return{
   
@@ -81,9 +72,9 @@ return{
     },
 methods:
 {
-toggleColorSelectors(){
+// toggleColorSelectors(){
 
-}
+// }
 
 
 }
@@ -101,7 +92,7 @@ toggleColorSelectors(){
 .character-creation-container{
     border:rgb(253, 253, 253) solid 2px;
     height:22rem;
-    width: 30rem;
+    width: 31.5rem;
     display: flex;
 }
 .character-creation-container > canvas{

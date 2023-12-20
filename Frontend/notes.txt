@@ -1,0 +1,53 @@
+            <div class="color-selectors">
+                <div>
+                    <label class="input-description" for="hair">hair</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="head">head</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="eyes">eyes</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="body">body</label><input type="color">
+                </div>
+                
+            </div> 
+            <div   class="color-selectors">
+                <div>
+                    <label class="input-description" for="arms">arms</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="hands">hands</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="legs">legs</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="feet">feet</label><input type="color">
+                </div>
+                
+            </div>
+            <div   class="color-selectors">
+                <div>
+                    <label class="input-description" for="shirt">shirt</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="coat">coat</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="gloves">gloves</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="pants">pants</label><input type="color">
+                </div>
+                
+            </div>
+            <div  class="color-selectors">
+                <div>
+                    <label class="input-description" for="socks">socks</label><input type="color">
+                </div>
+                <div>
+                    <label class="input-description" for="shoes">shoes</label><input type="color">
+                </div>
+            </div>
