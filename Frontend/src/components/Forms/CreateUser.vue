@@ -5,12 +5,12 @@
     <form action="submit">
         <div class="user-data-container">
         <div class="user-data">   
-                <input type="text" placeholder="UserName"> 
-                <input type="text"  placeholder="Password"> 
+                <input type="text" placeholder="UserName" required> 
+                <input type="password"  placeholder="Password" required> 
         </div>
         <div class="user-data">
-                <input type="email"  placeholder="Email">
-                <input type="date"  placeholder="Age">
+                <input type="email"  placeholder="Email" required>
+                <input type="date"  placeholder="Age" required>
             <label for="birthday" id="birthday" name="">Age</label>
             <CharacterCreation></CharacterCreation>
 

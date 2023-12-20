@@ -22,10 +22,10 @@
     </script>
     <style scoped>
 .tab-content{
-    width:100%;
+    width:min-content;
     height: 100%;
     display: flex;
-    flex-direction:column ;
+    flex-direction:column;
      margin-left:1rem ;
     border-radius: 5px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);

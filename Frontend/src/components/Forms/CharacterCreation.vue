@@ -3,56 +3,61 @@
         <canvas>
 
         </canvas>
+        
             <ReusableTabWrapper>
                 <TabContent title="1">
-
-                        <div>
-                            <label class="input-description" for="hair">hair</label><input type="color">
-                        </div>
-                        <div>
-                            <label class="input-description" for="head">head</label><input type="color">
-                        </div>
-                        <div>
-                            <label class="input-description" for="eyes">eyes</label><input type="color">
-                        </div>
-                        <div>
-                            <label class="input-description" for="body">body</label><input type="color">
-                        </div>
-                        
-                  
+                            <div>
+                                <label class="input-description" for="hair">hair</label><input type="color">
+                            </div>
+                            <div>
+                                <label class="input-description" for="head">head</label><input type="color">
+                            </div>
+                            <div>
+                                <label class="input-description" for="eyes">eyes</label><input type="color">
+                            </div>
+                            <div>
+                                <label class="input-description" for="body">body</label><input type="color">
+                            </div>         
             </TabContent>
-                <TabContent title="2"><div>
-                    <label class="input-description" for="arms">arms</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="hands">hands</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="legs">legs</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="feet">feet</label><input type="color">
-                </div></TabContent>
-                <TabContent title="3"> <div>
-                    <label class="input-description" for="shirt">shirt</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="coat">coat</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="gloves">gloves</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="pants">pants</label><input type="color">
-                </div></TabContent>
-                <TabContent title="4">                <div>
-                    <label class="input-description" for="socks">socks</label><input type="color">
-                </div>
-                <div>
-                    <label class="input-description" for="shoes">shoes</label><input type="color">
-                </div></TabContent>
-            </ReusableTabWrapper>
+                <TabContent title="2">
+                        <div>
+                            <label class="input-description" for="arms">arms</label><input type="color">
+                        </div>
+                        <div>
+                            <label class="input-description" for="hands">hands</label><input type="color">
+                        </div>
+                        <div>
+                            <label class="input-description" for="legs">legs</label><input type="color">
+                        </div>
+                        <div>
+                            <label class="input-description" for="feet">feet</label><input type="color">
+                        </div>
+                </TabContent>
+                <TabContent title="3"> 
+                    <div>
+                        <label class="input-description" for="shirt">shirt</label><input type="color">
+                    </div>
+                    <div>
+                        <label class="input-description" for="coat">coat</label><input type="color">
+                    </div>
+                    <div>
+                        <label class="input-description" for="gloves">gloves</label><input type="color">
+                    </div>
+                    <div>
+                        <label class="input-description" for="pants">pants</label><input type="color">
+                    </div>
+            </TabContent>
+                <TabContent title="4">                
+                    <div>
+                        <label class="input-description" for="socks">socks</label><input type="color">
+                    </div>
+                    <div>
+                        <label class="input-description" for="shoes">shoes</label><input type="color">
+                    </div>
+            </TabContent>
+            </ReusableTabWrapper> 
         </div>
+    
 </template>
 
 <script lang="ts">
@@ -70,25 +75,11 @@ return{
   
 }
     },
-methods:
-{
-// toggleColorSelectors(){
-
-// }
-
-
-}
 })
 
 </script>
 
 <style>
-
-.next-color-selection{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
 .character-creation-container{
     border:rgb(253, 253, 253) solid 2px;
     height:22rem;
@@ -104,37 +95,14 @@ methods:
 
 }
 canvas{
-
     height: 20rem;
     width:15rem;
     border: green solid 0.125rem;
-    border-radius: 60px;
-    
-}
-.character-attribute-selector-box{
-    width:100%;
-    height: 100%;
-    display: flex;
-    justify-content: end;
-    margin-left: 16px;
-}
-.color-selectors{
-    display: flex; 
-    flex-direction:column;
-    justify-content: space-around;
-    text-align: end;
-    margin-right:2rem; 
+    border-radius: 60px; 
 }
 .input-description{
     margin-right: 1rem;
     color: yellow;
     font-size: 2rem;
 }
-
-/* 
-.hidden{
-    display: none;
-} */
-
-
 </style>

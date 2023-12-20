@@ -38,19 +38,20 @@
 
 <style scoped>
 .tabs{
-max-width: 1rem;
+    /* width: 100%; */
+max-width: 15.4rem;
 margin:0;
+
 }
 .tabs-header{
-    margin-bottom:10px;
+    margin:10px 5px;
     list-style:none;
     padding:0;
     display:flex;
+    
 }
 
 .tabs-header li{
-    display: flex;
-    justify-content: center;
     width: 80px;
     text-align: center;
     padding: 10px 20px ;
