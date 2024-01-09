@@ -17,6 +17,7 @@ export default defineComponent( {
     name:"GameCardComponent",
     //id is the Url id route
  props:{
+    //flexgrid component is recieving this data in attributes
      id:{type:Number as PropType<number>,required: true},
     title:{type:String as PropType<string>,required: true},
     gameInfo:{type:String as PropType<string>,required: true},
