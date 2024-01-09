@@ -1,5 +1,6 @@
 <template>
     <div class="card-container">
+        <router-link class="router-link-custom" :to="{name:'current_game' ,params:{title:title,id:id}}">
         <div class="game-image-container">
             <img :src="require(`../../assets/${gameImage}`)" alt="">
         </div>
@@ -7,16 +8,16 @@
         <h4 class="game-title">{{title}}</h4>
         <p>{{gameInfo}}</p>
         </div>
-
-
-    
+        </router-link>
     </div>
 </template>
 <script lang="ts" >
 import { PropType, defineComponent } from 'vue';
 export default defineComponent( {
     name:"GameCardComponent",
+    //id is the Url id route
  props:{
+     id:{type:Number as PropType<number>,required: true},
     title:{type:String as PropType<string>,required: true},
     gameInfo:{type:String as PropType<string>,required: true},
     gameImage:{type:String as PropType<string>,required: true},
@@ -28,7 +29,7 @@ export default defineComponent( {
 
 .card-container{
    
-    margin: 20px;
+    margin: 5px;
     color: black;
     background-color: black;
     border:solid white 3px;
@@ -71,5 +72,10 @@ flex-grow: 1;
 }
 p{
     width: 100%;
+}
+.router-link-custom{
+    display:flex;
+    text-decoration: none;
+    color: inherit;
 }
 </style>

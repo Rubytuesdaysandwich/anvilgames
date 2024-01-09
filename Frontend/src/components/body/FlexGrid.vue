@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container">
     <div v-for="game in games" :key="game.id">
-      <GameCardComponent :game-info="game.gameInfo" :title="game.title" :game-image="'anvil-games-logo.jpg'"/>
+      <GameCardComponent :id="game.id"  :game-info="game.gameInfo" :title="game.title" :game-image="'anvil-games-logo.jpg'"/>
     </div>
   </div>
 </template>
@@ -10,11 +10,12 @@
 import GameCardComponent from '../gamecomponents/GameCard.vue'
 import {getDummy} from "../../utils/api"//grabbing api data from here using fetch
 import {defineComponent} from 'vue'
-
+//id is the URL id for routing to identify the game the user is playing
 interface games {
   id: number;
   title: string;
   gameInfo: string;
+  
 }
 
 
@@ -57,7 +58,7 @@ justify-content: center;
 
 }
 .grid-container>div{
-  border:solid yellow 2px;
+  border:double yellow 5px;
   width:fit-content;
   margin: 1rem;
 }

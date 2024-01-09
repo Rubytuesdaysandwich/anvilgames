@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -52,6 +53,13 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/NewGamesView.vue"),
+  },
+  {
+    //this is a dynamic route using params to get data from the data base using the :title and :id to route the user to the proper page using one component
+    path: '/current_game/:title/:id',
+    name: "current_game",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/CurrentGameView.vue"),
   },
 ];
 
