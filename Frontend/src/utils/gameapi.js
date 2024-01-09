@@ -22,10 +22,4 @@ export function createGameConfig(type, width, height, scene, gravity, physcicsTy
     }
 }
 
-export function preload(scene) {
-}
-export function create(scene) {
-}
 
-export function update(scene) {
-}

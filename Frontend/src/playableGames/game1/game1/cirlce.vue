@@ -11,7 +11,7 @@
 import { AUTO } from 'phaser';
 import * as Phaser from 'phaser';
 import { createGameConfig } from '../../../utils/gameapi';
-import { preload, create, update } from '../../../utils/gameapi';
+
 
 
 
@@ -19,6 +19,7 @@ import { preload, create, update } from '../../../utils/gameapi';
 
 
 export default{
+    name:"gameG2",
     onMounted(){
         //the game will be started when mounted to the DOM
         // example const gameConfig1 = createGameConfig(800, 600, {ExampleScene1}, 200, 'arcade');
