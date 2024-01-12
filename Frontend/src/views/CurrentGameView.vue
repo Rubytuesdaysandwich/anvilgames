@@ -13,9 +13,8 @@
 
 
 <script>
-
 import { onMounted, ref } from "vue";
-
+import gameG1 from 
 
 export default{
     name:"CurrentGameView",
