@@ -1,8 +1,7 @@
 <template>
-    <div>
-        
-        <div ref="gameContainer"  class="canvas-outline">
-            
+    <div class="outer-container"> 
+        <div class="canvas-outline">
+            <FirstGame> </FirstGame>
         </div>
     </div>
 </template>
@@ -13,9 +12,10 @@
 
 
 <script>
-import { onMounted, ref } from "vue";
-import gameG1 from 
+// import { onMounted } from "vue";
+import FirstGame from '../playableGames/gamesList/game1/FirstGame.vue'
 
+// import gameG2 from '../playableGames/gamesList/game2/square.vue'
 export default{
     name:"CurrentGameView",
     data(){
@@ -25,53 +25,44 @@ export default{
         };
 
     },
-   
+   components:{
+    FirstGame,
+    // gameG2,
+   },
     
     methods:{
         // Example usage for two different games with different physics engines we can call this function when we config the game engine for different types of games
 //start the game when the currentgameview page is reached
 initializeGame (){
 this.initialize = true;
-this.$refs.gameContainer
 },
  
     },
-    setup(){
-        const gameCanvas =ref(null)//create a ref for gameCanvas
-        onMounted(() =>{
-            this.initializeGame();//run when the CurrentGameview component is loaded. Load when the user selects a game and are directed to the game through routing.
-            //access the gamecanvas ref
-            console.log(gameCanvas.value);
-            //create phaser game instance?▼
-        });
-        return{gameCanvas//make the ref accessible in the template}
-    }
-     
-        //create a new phaser game instance
-        
-        
-
-        
-        // Ensure canvasElement is a valid HTMLCanvasElement
-        
-        
-        // /**
-        //  * Creates the first game
-        //  * @param {HTMLCanvasElement} canvasElement 
-        //  */
-        // function Game1(canvasElement) {
-            //     const game = new Phaser.Game({
-                //     canvas: canvasElement
-                // });
-}
+//     setup(){
+//         // const gameCanvas =ref(null)//create a ref for gameCanvas
+//         onMounted(() =>{
+//             this.initializeGame();//run when the CurrentGameview component is loaded. Load when the user selects a game and are directed to the game through routing.
+    
+//         });
+  
+// }
 }
 </script>
 <style scoped>
+.outer-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the canvas horizontally */
+  align-items: center; /* Center the canvas vertically */
+}
 .canvas-outline{
-border: white solid 2px;
-width: fit-content;
-display: flex;
-justify-content: center;
+/* border: rgb(255, 205, 3) double 10px; */
+height: auto;
+width: auto;
+overflow: hidden;
 }
 p{
     color: white;

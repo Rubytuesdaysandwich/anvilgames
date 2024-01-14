@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div>
     <canvas ref="gameCanvas">
     
@@ -11,8 +11,8 @@
     import { AUTO } from 'phaser';
     import * as Phaser from 'phaser';
     import { createGameConfig } from '../../../utils/gameapi';
-    import { onMounted } from 'vue';
-
+    import { onMounted, ref } from 'vue';
+  
 
     
     export default{
@@ -20,32 +20,33 @@
         data(){
             return{
                 platforms:null,
+                test2:null,
             }
         },  
         setup(){
-            let test2;
+           const gameCanvas = ref(null)
+           //the game will be started when mounted to the DOM
+           // example const gameConfig1 = createGameConfig(800, 600, {ExampleScene1}, 200, 'arcade');
+           // createGameConfig(type, width, height, scene, gravity, physcicsType)
+           const gameConfig = createGameConfig(AUTO,800,600,{},200, 'arcade',gameCanvas.value)
+           const game = new Phaser.Game(gameConfig)
             onMounted(()=>{
-                //the game will be started when mounted to the DOM
-                // example const gameConfig1 = createGameConfig(800, 600, {ExampleScene1}, 200, 'arcade');
-                // createGameConfig(type, width, height, scene, gravity, physcicsType)
-                const gameConfig = createGameConfig(AUTO,800,600,{},200, 'arcade')
-                const game = new Phaser.Game(gameConfig)
-                
+                this.create(game);
             });
-            return{
-                test2
-            }
+            return{gameCanvas}
         },
         methods:{
         //phaser js methods 
         preload ()
         {
-            this.load.image('test2','../../../../games/shared-assets/character-assets/testing character body.png');
+            this.load.image('ground','../../../../games/shared-assets/world-objects/pngtree-illustration-of-ground-png-image_5027670.jpg');
+            this.load.image('test2', '../../../../games/shared-assets/character-assets/testing character body.png');
             
     },
         //phaser js methods 
         create ()
         {
+            this.game
         //    this.add.image(200,300, 'test2');
             this.platforms = this.physics.add.staticGroup();
 
@@ -66,4 +67,4 @@
     },
 }
 
-    </script>
+    </script> -->

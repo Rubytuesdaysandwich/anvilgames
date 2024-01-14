@@ -47,12 +47,18 @@ body{
   max-height: auto;
   width: 100vw;
   max-height: auto;
-
-
+ overflow: hidden;
 } 
 
 
-
+// canvas{
+//     // background-color: black;
+//     width: 100%;
+//     height: 100%;
+//     margin: 0;
+//     padding: 0;
+   
+// }
 
 
 </style>
