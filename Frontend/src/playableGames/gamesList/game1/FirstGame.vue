@@ -1,6 +1,6 @@
 <template>
 
-    <div ref="gameCanvas">
+    <div  ref="gameCanvas">
      
     </div>
 
@@ -21,7 +21,7 @@ import Scene2 from '../game1/Scene2';
            //the game will be started when mounted to the DOM
            // example const gameConfig1 = createGameConfig(800, 600, {ExampleScene1}, 200, 'arcade');
            // createGameConfig(type, width, height, backgroundColor, scene, gravity, physcicsType)
-           const gameConfig = createGameConfig(1000,600, 0x000000,[new Scene1(), new Scene2()],200, 'arcade', { x: 400, y: 500 })
+           const gameConfig = createGameConfig(1000,600, 0x000000,[new Scene1(), new Scene2()],200, 'arcade')
            const game = new Phaser.Game(gameConfig)
            
        gameCanvas.value = game.canvas

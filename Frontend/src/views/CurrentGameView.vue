@@ -1,8 +1,8 @@
 <template>
     <div class="outer-container"> 
-        <div class="canvas-outline">
+        <!-- <div class="canvas-outline"> -->
             <FirstGame> </FirstGame>
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 <!-- if the game is initialized the game will show -->
@@ -58,12 +58,7 @@ this.initialize = true;
   justify-content: center; /* Center the canvas horizontally */
   align-items: center; /* Center the canvas vertically */
 }
-.canvas-outline{
-/* border: rgb(255, 205, 3) double 10px; */
-height: auto;
-width: auto;
-overflow: hidden;
-}
+
 p{
     color: white;
     font-size: larger;

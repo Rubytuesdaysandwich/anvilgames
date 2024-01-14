@@ -21,9 +21,9 @@ export function createGameConfig(width, height, backgroundColor, scene, gravity,
                 gravity: { y: gravity }
             }
         },
-        scale: {
-            position: { x: window.innerWidth / 2 - width / 2, y: window.innerHeight / 2 - height / 2 }
-        }
+        // scale: {
+        //     position: { x: window.innerWidth / 2 - width / 2, y: window.innerHeight / 2 - height / 2 }
+        // }
     }
 }
 
