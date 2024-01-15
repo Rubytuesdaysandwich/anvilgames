@@ -1,7 +1,7 @@
 <template>
 
     <div  ref="gameCanvas">
-     
+   
     </div>
 
 
@@ -15,25 +15,37 @@ import Scene1 from '../game1/Scene1';
 import Scene2 from '../game1/Scene2';
 
         // const gameCanvas =ref<HTMLCanvasElement>();
+        const gameCanvas = ref(null)
+        let game;//declaring game outtside the onMounted function
         onMounted(()=>{
-           const gameCanvas = ref(null)
 
            //the game will be started when mounted to the DOM
            // example const gameConfig1 = createGameConfig(800, 600, {ExampleScene1}, 200, 'arcade');
            // createGameConfig(type, width, height, backgroundColor, scene, gravity, physcicsType)
-           const gameConfig = createGameConfig(1000,600, 0x000000,[new Scene1(), new Scene2()],200, 'arcade')
-           const game = new Phaser.Game(gameConfig)
+           const gameConfig = createGameConfig(1000,600, 0x199B9B,[new Scene1(), new Scene2()],200, 'arcade');
+           const game = new Phaser.Game(gameConfig);
            
-       gameCanvas.value = game.canvas
-       return{gameCanvas}
+          
+           gameCanvas.value = game.canvas
+           
+         
+      //  return{gameCanvas}
        }
     );
 
     onBeforeUnmount(() => {
   // Cleanup Phaser game when component is about to be unmounted
   // activated when the user leave the game to another page to uncunstruct the phaser canvas
- 
+ //not working yet
+  if (game) {
+    setTimeout(() => {
+      game.destroy(true); // The true parameter destroys all active scenes and removes the canvas
+    },1000)
+      }
 });
+
+
+
     
   
     

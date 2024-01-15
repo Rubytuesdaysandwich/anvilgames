@@ -3,17 +3,14 @@ import * as Phaser from 'phaser'
 // const gameConfig1 = createGameConfig(800, 600, ExampleScene1, 200, 'arcade');
 // const gameConfig2 = createGameConfig(1200, 800, ExampleScene2, 300, 'p2');
 export function createGameConfig(width, height, backgroundColor, scene, gravity, physicsType) {
+
     return {
         //pass in just the type canvas, webgl, our Auto
         type: Phaser.AUTO,
-        width: width,
-        height: height,
+        // width: width,
+        // height: height,
         backgroundColor: backgroundColor,
-        scene: {
-            preload: scene.preload,
-            create: scene.create,
-            update: scene.update
-        }
+        scene
         ,
         physics: {
             default: physicsType,
@@ -21,9 +18,12 @@ export function createGameConfig(width, height, backgroundColor, scene, gravity,
                 gravity: { y: gravity }
             }
         },
-        // scale: {
-        //     position: { x: window.innerWidth / 2 - width / 2, y: window.innerHeight / 2 - height / 2 }
-        // }
+        scale: {
+            width: width,
+            height: height,
+            autoCenter: Phaser.Scale.CENTER_BOTH,
+            mode: Phaser.Scale.FIT,
+        }
     }
 }
 

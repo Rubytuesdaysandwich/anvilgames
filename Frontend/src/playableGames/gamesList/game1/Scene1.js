@@ -6,7 +6,8 @@ class Scene1 extends Phaser.Scene {
     }
     create() {
         this.add.text(20, 20, "loading game...", { font: "25px Arial", fill: 'yellow' })
-        this.scene.start("playGame")
+        this.scene.start("bootGame")
+
     }
 }
 export default Scene1
