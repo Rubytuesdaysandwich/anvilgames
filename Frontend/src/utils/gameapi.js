@@ -7,8 +7,6 @@ export function createGameConfig(width, height, backgroundColor, scene, gravity,
     return {
         //pass in just the type canvas, webgl, our Auto
         type: Phaser.AUTO,
-        // width: width,
-        // height: height,
         backgroundColor: backgroundColor,
         scene
         ,
@@ -24,6 +22,7 @@ export function createGameConfig(width, height, backgroundColor, scene, gravity,
             autoCenter: Phaser.Scale.CENTER_BOTH,
             mode: Phaser.Scale.FIT,
         }
+
     }
 }
 

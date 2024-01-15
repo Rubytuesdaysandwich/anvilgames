@@ -1,7 +1,7 @@
 <template>
 
     <div  ref="gameCanvas">
-   
+
     </div>
 
 
@@ -22,14 +22,14 @@ import Scene2 from '../game1/Scene2';
            //the game will be started when mounted to the DOM
            // example const gameConfig1 = createGameConfig(800, 600, {ExampleScene1}, 200, 'arcade');
            // createGameConfig(type, width, height, backgroundColor, scene, gravity, physcicsType)
-           const gameConfig = createGameConfig(1000,600, 0x199B9B,[new Scene1(), new Scene2()],200, 'arcade');
+           const gameConfig = createGameConfig(1000,500, 0x199B9B,[new Scene1(), new Scene2()],200, 'arcade');
            const game = new Phaser.Game(gameConfig);
            
           
            gameCanvas.value = game.canvas
            
          
-      //  return{gameCanvas}
+      
        }
     );
 
@@ -40,7 +40,7 @@ import Scene2 from '../game1/Scene2';
   if (game) {
     setTimeout(() => {
       game.destroy(true); // The true parameter destroys all active scenes and removes the canvas
-    },1000)
+    },0)
       }
 });
 
@@ -52,8 +52,7 @@ import Scene2 from '../game1/Scene2';
  
 
 </script>
-<style>
-
+<style scoped>
 
 
 </style>

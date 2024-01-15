@@ -13,6 +13,7 @@ const config = {
 }
 
 app.use(cors())
+app.use(express.static('Frontend/src/playableGames/gamesList/game1/world-objects')); // Serve static files from the "world-objects" directory
 app.use("/api", apiRouter);
 
 https.createServer(config, app).listen(port, () => {
