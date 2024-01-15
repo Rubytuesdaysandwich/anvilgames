@@ -6,7 +6,11 @@ class Scene1 extends Phaser.Scene {
     }
     preload() {
         // key/url 
-        this.load.image("background", "world-objects/background.png")
+        this.load.image("background", "game1/world-objects/images/background.png")
+        this.load.image("ship", "game1/character-assets/ship.png")
+        this.load.image("ship2", "game1/character-assets/ship2.png")
+        this.load.image("ship3", "game1/character-assets/ship3.png")
+
     }
     create() {
         //the jump to scene 2 happens immedietly on loading so you will not see this one
