@@ -13,7 +13,7 @@ class Scene1 extends Phaser.Scene {
 
     }
     create() {
-        //the jump to scene 2 happens immedietly on loading so you will not see this one
+        //the jump to scene 2 happens immedietly on loading so you will not see this
         this.add.text(20, 20, "loading game...", { font: "25px Arial", fill: 'yellow' })
         // Load assets in the preload method
         this.scene.start("playGame")
