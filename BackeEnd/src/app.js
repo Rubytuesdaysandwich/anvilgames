@@ -12,9 +12,12 @@ const config = {
     cert: fs.readFileSync("cert.pem"),
 }
 
+
+
+app.use(express.static('/Frontend/src/playableGames')); // Serve static files from the "world-objects" directory
 app.use(cors())
-app.use(express.static('/Frontend')); // Serve static files from the "world-objects" directory
 app.use("/api", apiRouter);
+
 
 https.createServer(config, app).listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
