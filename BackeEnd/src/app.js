@@ -14,7 +14,7 @@ const config = {
 
 
 
-app.use(express.static('/Frontend/src/playableGames')); // Serve static files from the "world-objects" directory
+// app.use(express.static('/Frontend/src/playableGames')); // Serve static files from the "world-objects" directory
 app.use(cors())
 app.use("/api", apiRouter);
 

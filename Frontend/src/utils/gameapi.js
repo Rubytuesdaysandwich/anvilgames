@@ -7,10 +7,9 @@ export function createGameConfig(width, height, backgroundColor, scene, gravity,
     return {
         //pass in just the type canvas, webgl, our Auto
         type: Phaser.AUTO,
+
         backgroundColor: backgroundColor,
         scene,
-
-
         physics: {
             default: physicsType,
             [physicsType]: {
@@ -22,9 +21,9 @@ export function createGameConfig(width, height, backgroundColor, scene, gravity,
             height: height,
             autoCenter: Phaser.Scale.CENTER_BOTH,
             mode: Phaser.Scale.FIT,
+            parent: "outer-container"
         },
 
-        parent: "gameContainer"
     }
 }
 

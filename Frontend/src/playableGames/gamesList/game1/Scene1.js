@@ -7,12 +7,11 @@ class Scene1 extends Phaser.Scene {
     }
     preload() {
         // key/url 
-        this.load.image("background", "world-objects/images/background.png");
-
+        this.load.image("background", "world-objects/background/background.png");
         this.load.image("ship", "character-assets/ship.png");
         this.load.image("ship2", "character-assets/ship2.png");
         this.load.image("ship3", "character-assets/ship3.png");
-        console.log("scene 1 preloaded");
+
 
     }
 
@@ -22,7 +21,7 @@ class Scene1 extends Phaser.Scene {
         this.add.sprite(200, 40, "ship");
         // Load assets in the preload method
         this.scene.start("playGame");
-        console.log("scene1 create run");
+
     }
 }
 export default Scene1
