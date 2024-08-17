@@ -20,5 +20,5 @@ app.use("/api", apiRouter);
 
 
 https.createServer(config, app).listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+    console.log(`Server running on https://localhost:${port}`);
 })
